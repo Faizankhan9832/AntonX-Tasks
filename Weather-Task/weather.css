@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#4a90e2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#fff;
+    width:350px;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    cursor:pointer;
+    background:#0077ff;
+    color:white;
+    border:none;
+    font-size:17px;
+}
+
+button:hover{
+    background:#005fd4;
+}
+
+.weather{
+    margin-top:20px;
+    text-align:left;
+}
+
+.weather p{
+    margin:10px 0;
+}
+
+#loading{
+    margin-top:15px;
+    color:red;
+}

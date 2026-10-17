@@ -1,0 +1,1282 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1b2030 0%,
+            #101217 45%,
+            #0b0d11 100%
+        );
+
+    color: #e5e7eb;
+
+    font-family: "Quicksand", sans-serif;
+
+    padding: 12px 42px;
+}
+
+
+.app {
+    width: 100%;
+    max-width: 740px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #f3f4f6;
+
+    margin-left: 45px;
+    margin-bottom: 8px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   INPUT SECTION
+========================= */
+
+.input-section {
+    background: rgba(24, 27, 35, 0.9);
+
+    border: 2px solid #737987;
+
+    border-radius: 25px;
+
+    padding: 20px 42px 16px;
+
+    height: 185px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+label {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #cbd5e1;
+
+    margin-left: 4px;
+    margin-bottom: 3px;
+}
+
+
+input {
+    width: 100%;
+    height: 32px;
+
+    background: #11141a;
+
+    border: 2px solid #737987;
+
+    border-radius: 8px;
+
+    color: #f3f4f6;
+
+    padding: 0 20px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+
+input:focus {
+    border-color: #8b9cff;
+
+    box-shadow:
+        0 0 0 2px rgba(139, 156, 255, 0.12);
+}
+
+
+/* =========================
+   DESCRIPTION + PRIORITY
+========================= */
+
+.description-row {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-end;
+}
+
+
+.description-box {
+    flex: 1;
+}
+
+
+.priority-wrapper {
+    position: relative;
+
+    width: 127px;
+}
+
+
+/* =========================
+   TOP PRIORITY BUTTON
+========================= */
+
+.priority-button {
+    width: 100%;
+    height: 32px;
+
+    background: #161922;
+
+    border: 2px solid #737987;
+
+    border-radius: 8px;
+
+    color: #e5e7eb;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: 0.2s;
+}
+
+
+.priority-button:hover {
+    background: #202431;
+
+    border-color: #9aa5ff;
+}
+
+
+.dropdown-arrow {
+    font-size: 14px;
+
+    color: #aeb7ff;
+}
+
+
+/* =========================
+   PRIORITY ICON
+========================= */
+
+.priority-symbol {
+    display: inline-block;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: 900;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    width: 14px;
+
+    text-align: center;
+
+    transform-origin: center;
+}
+
+
+.priority-symbol.high {
+    transform: rotate(-90deg);
+
+    color: #ff5c5c;
+}
+
+
+.priority-symbol.medium {
+    transform: rotate(0deg);
+
+    color: #f5c451;
+}
+
+
+.priority-symbol.low {
+    transform: rotate(90deg);
+
+    color: #55d68a;
+}
+
+
+/* =========================
+   TOP PRIORITY MENU
+========================= */
+
+.priority-menu {
+    display: none;
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 39px;
+    left: 0;
+
+    background: #171a22;
+
+    border: 2px solid #737987;
+
+    border-radius: 9px;
+
+    z-index: 50;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.priority-menu.show {
+    display: block;
+}
+
+
+.priority-option {
+    height: 34px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.priority-option:hover {
+    background: #252a38;
+}
+
+
+.high-option {
+    color: #ff8585;
+}
+
+
+.medium-option {
+    color: #f7d77c;
+}
+
+
+.low-option {
+    color: #75e6a2;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-button {
+    display: block;
+
+    width: 340px;
+    height: 31px;
+
+    margin: 8px auto 0;
+
+    background: #1b2030;
+
+    border: 2px solid #737987;
+
+    border-radius: 8px;
+
+    color: #e5e7eb;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.add-button:hover {
+    background: #303750;
+
+    border-color: #9aa5ff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   BOARD
+========================= */
+
+.board {
+    width: 100%;
+
+    height: 300px;
+
+    margin-top: 14px;
+
+    background: rgba(20, 23, 30, 0.95);
+
+    border: 2px solid #737987;
+
+    border-radius: 24px;
+
+    display: grid;
+
+    /*
+        All five columns have
+        equal width.
+    */
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   COLUMNS
+========================= */
+
+.column {
+    min-width: 0;
+    min-height: 0;
+
+    border-right: 2px solid #555b68;
+
+    padding: 16px 10px 8px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.column:last-child {
+    border-right: none;
+}
+
+
+/* =========================
+   COLUMN HEADERS
+========================= */
+
+.column-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    min-width: 115px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    padding: 0 14px;
+
+    margin: 0 auto 10px;
+
+    background: #171a22;
+
+    border: 2px solid #737987;
+
+    border-radius: 8px;
+
+    color: #dce1ea;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.column-header:hover {
+    border-color: #8b9cff;
+}
+
+
+/* =========================
+   TASK CONTAINER
+========================= */
+
+/*
+    EVERY COLUMN CAN SCROLL
+    INDEPENDENTLY.
+*/
+
+.task-container {
+    position: relative;
+
+    min-height: 0;
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding-right: 3px;
+
+    /*
+        Hide scrollbar in Firefox.
+    */
+
+    scrollbar-width: none;
+}
+
+
+/*
+    Hide scrollbar in Chrome,
+    Edge and Safari.
+*/
+
+.task-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 92px;
+
+    /*
+        Extra space between cards
+        for priority dropdown.
+    */
+
+    margin-bottom: 18px;
+
+    padding: 10px 42px 10px 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1f2a,
+            #151820
+        );
+
+    border: 2px solid #687086;
+
+    border-radius: 18px;
+
+    cursor: grab;
+
+    user-select: none;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s,
+        opacity 0.2s;
+
+    /*
+        Normal cards stay
+        above the container background.
+    */
+
+    z-index: 1;
+}
+
+
+/*
+    IMPORTANT:
+
+    When a priority menu is open,
+    the entire card comes above
+    the other cards.
+*/
+
+.task-card.menu-open {
+    z-index: 1000;
+}
+
+
+.task-card:hover {
+    border-color: #929dff;
+
+    transform: translateY(-1px);
+}
+
+
+.task-card:active {
+    cursor: grabbing;
+}
+
+
+/* =========================
+   TASK TITLE
+========================= */
+
+.task-title {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #f1f5f9;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================
+   TASK DESCRIPTION
+========================= */
+
+.task-description {
+    font-size: 13px;
+
+    color: #aeb6c6;
+
+    overflow: hidden;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   CARD PRIORITY SELECTOR
+========================= */
+
+.card-priority-wrapper {
+    position: absolute;
+
+    right: 8px;
+
+    top: 8px;
+}
+
+
+.card-priority-button {
+    width: 25px;
+
+    height: 25px;
+
+    background: #11141a;
+
+    border: 1px solid #596174;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.card-priority-button:hover {
+    border-color: #a0aaff;
+
+    background: #242938;
+}
+
+
+/* =========================
+   CARD PRIORITY MENU
+========================= */
+
+.card-priority-menu {
+    display: none;
+
+    position: absolute;
+
+    right: 0;
+
+    top: 29px;
+
+    width: 95px;
+
+    background: #181c25;
+
+    border: 1px solid #687086;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.5);
+}
+
+
+.card-priority-menu.show {
+    display: block;
+}
+
+
+/*
+    If there is not enough space
+    below the button, JavaScript
+    adds the open-up class.
+*/
+
+.card-priority-menu.open-up {
+    top: auto;
+
+    bottom: 29px;
+}
+
+
+.card-priority-option {
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.card-priority-option:hover {
+    background: #292f40;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-button {
+    display: none;
+
+    position: absolute;
+
+    left: 8px;
+
+    bottom: 7px;
+
+    width: 24px;
+
+    height: 24px;
+
+    background: #2a171a;
+
+    border: 1px solid #87454d;
+
+    border-radius: 6px;
+
+    color: #ff8585;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+
+/*
+    Delete button only appears
+    when card reaches Done.
+*/
+
+.task-card.done .delete-button {
+    display: flex;
+}
+
+
+.delete-button:hover {
+    background: #552126;
+
+    border-color: #ff6b6b;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   DRAGGING
+========================= */
+
+.task-card.dragging {
+    opacity: 0.4;
+
+    transform: rotate(2deg);
+
+    z-index: 500;
+}
+
+
+.task-container.drag-over {
+    background:
+        rgba(
+            139,
+            156,
+            255,
+            0.06
+        );
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   DONE
+========================= */
+
+.task-card.done {
+    border-color: #4d8f6b;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18251e,
+            #141b17
+        );
+}
+
+
+.task-card.done .task-title,
+.task-card.done .task-description {
+    text-decoration: line-through;
+
+    text-decoration-thickness: 2px;
+
+    color: #7f8a84;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .app {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    h1 {
+        margin-left: 15px;
+
+        font-size: 21px;
+    }
+
+
+    /* =========================
+       INPUT SECTION
+    ========================= */
+
+    .input-section {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 205px;
+
+        padding: 18px 18px 16px;
+
+        border-radius: 20px;
+    }
+
+
+    /* =========================
+       DESCRIPTION + PRIORITY
+    ========================= */
+
+    .description-row {
+        width: 100%;
+
+        gap: 8px;
+    }
+
+
+    .description-box {
+        min-width: 0;
+    }
+
+
+    .priority-wrapper {
+        width: 110px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       ADD BUTTON
+    ========================= */
+
+    .add-button {
+        width: 70%;
+
+        max-width: 340px;
+
+        min-width: 220px;
+
+        margin-top: 10px;
+    }
+
+
+    /* =========================
+       BOARD
+    ========================= */
+
+    .board {
+        width: 100%;
+
+        height: 330px;
+
+        margin-top: 12px;
+
+        /*
+            Keep five columns usable
+            on smaller screens.
+        */
+
+        grid-template-columns:
+            repeat(5, 165px);
+
+        /*
+            Allow horizontal scrolling
+            for the board itself.
+        */
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        border-radius: 20px;
+    }
+
+
+    /* =========================
+       COLUMNS
+    ========================= */
+
+    .column {
+        width: auto;
+
+        min-width: 0;
+
+        min-height: 0;
+
+        padding: 14px 9px 8px;
+    }
+
+
+    /* =========================
+       COLUMN HEADERS
+    ========================= */
+
+    .column-header {
+        min-width: 105px;
+
+        height: 31px;
+
+        padding: 0 10px;
+
+        margin-bottom: 9px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       TASK CONTAINER
+    ========================= */
+
+    /*
+        Every column still scrolls
+        independently on mobile.
+    */
+
+    .task-container {
+        min-height: 0;
+
+        flex: 1;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        scrollbar-width: none;
+    }
+
+
+    .task-container::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* =========================
+       TASK CARD
+    ========================= */
+
+    .task-card {
+        width: 100%;
+
+        min-height: 88px;
+
+        padding:
+            9px 38px 9px 9px;
+
+        margin-bottom: 18px;
+
+        border-radius: 16px;
+    }
+
+
+    .task-title {
+        font-size: 14px;
+    }
+
+
+    .task-description {
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       CARD PRIORITY
+    ========================= */
+
+    .card-priority-button {
+        width: 24px;
+
+        height: 24px;
+    }
+
+
+    .card-priority-menu {
+        width: 90px;
+    }
+
+
+    /* =========================
+       DELETE BUTTON
+    ========================= */
+
+    .delete-button {
+        width: 23px;
+
+        height: 23px;
+
+        left: 7px;
+
+        bottom: 6px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 8px;
+    }
+
+
+    h1 {
+        margin-left: 10px;
+
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       INPUT
+    ========================= */
+
+    .input-section {
+        padding: 16px 14px;
+
+        min-height: 215px;
+
+        border-radius: 18px;
+    }
+
+
+    label {
+        font-size: 14px;
+    }
+
+
+    input {
+        height: 34px;
+
+        padding: 0 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
+
+    .description-row {
+        gap: 6px;
+    }
+
+
+    .priority-wrapper {
+        width: 100px;
+    }
+
+
+    .priority-button {
+        height: 34px;
+
+        font-size: 13px;
+
+        gap: 4px;
+    }
+
+
+    .priority-symbol {
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       ADD BUTTON
+    ========================= */
+
+    .add-button {
+        width: 85%;
+
+        min-width: 0;
+
+        height: 34px;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       BOARD
+    ========================= */
+
+    .board {
+        height: 340px;
+
+        grid-template-columns:
+            repeat(5, 165px);
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        border-radius: 18px;
+    }
+
+
+    /* =========================
+       COLUMNS
+    ========================= */
+
+    .column {
+        padding:
+            13px 8px 7px;
+    }
+
+
+    .column-header {
+        min-width: 100px;
+
+        height: 30px;
+
+        font-size: 13px;
+
+        padding: 0 8px;
+    }
+
+
+    /* =========================
+       TASK CONTAINER
+    ========================= */
+
+    .task-container {
+        min-height: 0;
+
+        flex: 1;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        scrollbar-width: none;
+    }
+
+
+    .task-container::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .task-card {
+        min-height: 82px;
+
+        padding:
+            8px 34px 8px 8px;
+
+        margin-bottom: 18px;
+
+        border-radius: 14px;
+    }
+
+
+    .task-title {
+        font-size: 13px;
+    }
+
+
+    .task-description {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       CARD PRIORITY
+    ========================= */
+
+    .card-priority-wrapper {
+        right: 6px;
+
+        top: 7px;
+    }
+
+
+    .card-priority-button {
+        width: 23px;
+
+        height: 23px;
+    }
+
+
+    /* =========================
+       DELETE BUTTON
+    ========================= */
+
+    .delete-button {
+        width: 22px;
+
+        height: 22px;
+
+        left: 6px;
+
+        bottom: 6px;
+    }
+
+}

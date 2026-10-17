@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Game</title>
+
+    <link rel="stylesheet" href="./Quiz.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- QUIZ SCREEN -->
+        <div id="quiz-screen">
+
+            <div class="quiz-header">
+                <h1>Trivia Quiz</h1>
+
+                <div class="score">
+                    Score: <span id="score">0</span>
+                </div>
+            </div>
+
+            <div class="progress">
+                Question <span id="question-number">1</span>
+                of <span id="total-questions">10</span>
+            </div>
+
+            <div class="question-box">
+                <h2 id="question">Question goes here</h2>
+            </div>
+
+            <div id="answers" class="answers">
+                <!-- Answers will be created by JavaScript -->
+            </div>
+
+            <button id="next-btn" class="next-btn" disabled>
+                Next Question
+            </button>
+
+        </div>
+
+
+        <!-- RESULT SCREEN -->
+        <div id="result-screen" class="hidden">
+
+            <h1>Quiz Finished!</h1>
+
+            <p>Your final score is:</p>
+
+            <div class="final-score">
+                <span id="final-score">0</span> / 10
+            </div>
+
+            <p id="result-message"></p>
+
+            <button id="restart-btn">
+                Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="./Quiz.js"></script>
+
+</body>
+</html>

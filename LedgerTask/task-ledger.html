@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Ledger</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <span class="eyebrow">Workflow · 5 stages</span>
+  <h1>Task Ledger</h1>
+  <p>Log a task, set its priority, then carry it through the board — Todo → Improve → Review → Checking → Done.</p>
+</header>
+
+<section class="composer">
+  <form id="task-form">
+    <div class="field">
+      <label for="title">Title</label>
+      <input type="text" id="title" placeholder="e.g. Fix header spacing" maxlength="80">
+    </div>
+    <div class="field">
+      <label for="desc">Description</label>
+      <textarea id="desc" placeholder="Short details about the task" maxlength="240"></textarea>
+    </div>
+    <div class="field">
+      <label for="priority">Priority</label>
+      <select id="priority">
+        <option value="high">High</option>
+        <option value="medium" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+    <button type="submit">Add task</button>
+    <span class="hint" id="hint">Title can't be empty.</span>
+  </form>
+</section>
+
+<main class="board" id="board"></main>
+
+<script src="./script.js" ></script>
+
+</body>
+</html>

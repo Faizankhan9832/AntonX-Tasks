@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Todo List</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <h1>Todo-List</h1>
+
+
+        <!-- ================= INPUT SECTION ================= -->
+
+        <div class="input-section">
+
+            <label for="todoTitle">
+                Todo Title
+            </label>
+
+
+            <input
+                type="text"
+                id="todoTitle"
+                placeholder="enter your todo"
+            >
+
+
+            <div class="description-row">
+
+                <div class="description-box">
+
+                    <label for="todoDescription">
+                        Description
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="todoDescription"
+                        placeholder="Enter you desc"
+                    >
+
+                </div>
+
+
+                <!-- TOP PRIORITY DROPDOWN -->
+
+                <div class="priority-wrapper">
+
+                    <button
+                        type="button"
+                        id="priorityButton"
+                        class="priority-button"
+                    >
+
+                        <span
+                            id="priorityIcon"
+                            class="priority-symbol high"
+                        >
+                            >
+                        </span>
+
+
+                        <span id="priorityText">
+                            High
+                        </span>
+
+
+                        <span class="dropdown-arrow">
+                            ▾
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="priorityMenu"
+                        class="priority-menu"
+                    >
+
+                        <div
+                            class="priority-option high-option"
+                            data-priority="high"
+                        >
+
+                            <span
+                                class="priority-symbol high"
+                            >
+                                >
+                            </span>
+
+
+                            <span>
+                                High
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="priority-option medium-option"
+                            data-priority="medium"
+                        >
+
+                            <span
+                                class="priority-symbol medium"
+                            >
+                                >
+                            </span>
+
+
+                            <span>
+                                Medium
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="priority-option low-option"
+                            data-priority="low"
+                        >
+
+                            <span
+                                class="priority-symbol low"
+                            >
+                                >
+                            </span>
+
+
+                            <span>
+                                Low
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD BUTTON -->
+
+            <button
+                id="addTodoButton"
+                class="add-button"
+            >
+                Add Todo & List
+            </button>
+
+        </div>
+
+
+        <!-- ================= BOARD ================= -->
+
+        <div class="board">
+
+
+            <!-- TODOS -->
+
+            <div class="column todos-column">
+
+                <div class="column-header">
+                    Todos
+                </div>
+
+
+                <div
+                    class="task-container"
+                    id="todos"
+                    data-status="todos"
+                ></div>
+
+            </div>
+
+
+            <!-- IN PROGRESS -->
+
+            <div class="column">
+
+                <div class="column-header">
+                    In-progress
+                </div>
+
+
+                <div
+                    class="task-container"
+                    id="in-progress"
+                    data-status="in-progress"
+                ></div>
+
+            </div>
+
+
+            <!-- REVIEW -->
+
+            <div class="column">
+
+                <div class="column-header">
+                    Review
+                </div>
+
+
+                <div
+                    class="task-container"
+                    id="review"
+                    data-status="review"
+                ></div>
+
+            </div>
+
+
+            <!-- TESTING -->
+
+            <div class="column">
+
+                <div class="column-header">
+                    UA-Testing
+                </div>
+
+
+                <div
+                    class="task-container"
+                    id="testing"
+                    data-status="testing"
+                ></div>
+
+            </div>
+
+
+            <!-- DONE -->
+
+            <div class="column done-column">
+
+                <div class="column-header">
+                    Done
+                </div>
+
+
+                <div
+                    class="task-container"
+                    id="done"
+                    data-status="done"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

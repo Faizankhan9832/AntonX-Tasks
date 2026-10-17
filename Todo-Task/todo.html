@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="./todo.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <!-- App heading -->
+        <h1>My To-Do List</h1>
+
+
+        <!-- Add task section -->
+        <div class="task-input">
+
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter a new task..."
+            >
+
+            <button id="addTaskBtn">
+                Add
+            </button>
+
+        </div>
+
+
+        <!-- Filter buttons -->
+        <div class="filters">
+
+            <button id="allBtn" class="filter active">
+                All
+            </button>
+
+            <button id="activeBtn" class="filter">
+                Active
+            </button>
+
+            <button id="completedBtn" class="filter">
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Task list -->
+        <ul id="taskList">
+
+            <!-- JavaScript will create tasks here -->
+
+        </ul>
+
+
+        <!-- Bottom section -->
+        <div class="todo-footer">
+
+            <span id="taskCounter">
+                0 items left
+            </span>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="./todo.js"></script>
+
+</body>
+</html>
+```

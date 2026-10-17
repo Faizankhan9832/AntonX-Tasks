@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script > 
+        
+const person = {
+    name: "Faizan",
+    age: 20,
+
+    introduce: function (city) {
+        console.log(this.name, this.age, city);
+    }
+};
+
+const student = {
+    name: "Ali",
+    age: 22
+};
+
+const teacher = {
+    name: "Ahmed",
+    age: 35
+};
+
+const fn = person.introduce;
+
+person.introduce("Peshawar"); // faizan , 20, Peshawar
+
+fn.call(student, "Lahore");   // Ali, 22, Lahore
+
+fn.apply(teacher, ["Islamabad"]);   // ahmed , 35 ,islamabad
+
+const boundFn = person.introduce.bind(student);
+
+boundFn("Karachi"); // ali 22 karachi
+
+Object.setPrototypeOf(student, teacher);
+
+student.introduce = person.introduce;
+
+student.introduce("Quetta");
+
+console.log(student.name);
+console.log(student.__proto__.name);
+    </script>
+</body>
+</html>
